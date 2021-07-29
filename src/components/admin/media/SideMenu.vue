@@ -3,7 +3,7 @@
     class="categories"
     default-active="0"
     @select="handleSelect"
-    active-text-color="red"
+    active-text-color="#09AAFF"
     style="background-color: rgba(255,255,255,.8)"  >
     <el-menu-item index="0">
       <i class="el-icon-document"></i>
@@ -41,11 +41,25 @@
     name: 'SideMenu',
     data () {
       return {
-        cid: ''
+        cid: '',
+        menus:[
+          {id:0,name:"全部文件"},
+          {id:1,name:"图片"},
+          {id:2,name:"文档"},
+          {id:3,name:"视频"},
+          {id:4,name:"种子"},
+          {id:5,name:"音乐"},
+          {id:6,name:"其他"},
+          ],
+        fileType:''
       }
     },
     methods: {
       handleSelect (key, keyPath) {
+        console.log(key)
+        let fileType = this.menus.find(x => x.id==key).name
+        this.fileType=fileType
+        // console.log(keyPath);
         this.cid = key
         this.$emit('indexSelect')
       }
@@ -54,7 +68,7 @@
 </script>
 
 <style scoped>
-  .categories {
+  /*.categories {
     position: absolute;
     margin-left: 50%;
     left: -600px;
@@ -65,6 +79,6 @@
     text-align: left;
     margin-bottom: 20px;
     background-color: rgba(255,255,255,.8)
-  }
+  }*/
 </style>
 

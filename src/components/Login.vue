@@ -61,8 +61,11 @@ export default {
   }
 }
 </script>
+<style>
 
+</style>
 <style scoped>
+
   .login-container {
     border-radius: 15px;
     background-clip: padding-box;

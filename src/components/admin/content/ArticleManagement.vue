@@ -94,7 +94,7 @@
     },
     computed: {
       tableHeight () {
-        return window.innerHeight - 320
+        return window.innerHeight - 220
       }
     },
     methods: {

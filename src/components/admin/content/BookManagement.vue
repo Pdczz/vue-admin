@@ -33,7 +33,7 @@
           fit>
         </el-table-column>
         <el-table-column
-          prop="category.name"
+          prop="cname"
           label="分类"
           width="100">
         </el-table-column>
@@ -101,7 +101,7 @@
     },
     computed: {
       tableHeight () {
-        return window.innerHeight - 320
+        return window.innerHeight - 220
       }
     },
     methods: {
