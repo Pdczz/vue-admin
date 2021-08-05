@@ -2,7 +2,7 @@
   <div style="text-align: left">
       <el-button @click="upload" style="margin-left: 20px" size="medium" type="primary">
         <i class="el-icon-upload" style="font-size: 15px"></i>&nbsp&nbsp上传</el-button>
-
+      <slot></slot>
     <!--<video
       id="my-video"
       class="video-js"
